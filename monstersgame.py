@@ -2,18 +2,14 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from datetime import datetime
 import time
-browser = webdriver.Firefox(executable_path="/usr/local/bin/geckodriver")
+browser = webdriver.Firefox(executable_path="/usr/local/bin/geckodriver") #local onde o selenium está na maquina
 browser.get('http://br4.monstersgame.moonid.net/')
 print('Title: %s' % browser.title)
 now = datetime.now()
 print(now)
 time.sleep(2)
-cookie = {"name": "GAMESESSID", "value": "1a4ufjqbrej5t6osc9ub39mcbna2g3kr"}
+cookie = {"name": "GAMESESSID", "value": ""} #colocar o seu cookie
 browser.add_cookie(cookie)
-#cookie1 = {"name": "_swa_gv", "value": "5165529151650271412", "domain" : ".moonid.net"}
-#browser.add_cookie(cookie1)
-#cookie2 = {"name": "_swa_uv", "value": "3498531711650271412", "domain" : ".moonid.net"}
-#browser.add_cookie(cookie2)
 time.sleep(2)
 browser.refresh()
 time.sleep(2)
@@ -49,6 +45,4 @@ for i in range(5000):
 	continua.click()
 	ataque = browser.find_element_by_css_selector('[alt="Ataque:"]')
 	ataque.click()	
-	#attack = browser.find_element_by_xpath("//input[@type='image']")
-	#attack.click()
 browser.quit()
