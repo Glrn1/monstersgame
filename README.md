@@ -1,2 +1,2 @@
 # monstersgame
-attack script
+attack script ever 5 minutes
