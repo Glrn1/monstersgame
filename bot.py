@@ -4,16 +4,16 @@ from datetime import datetime
 import time
 
 browser = webdriver.Firefox(executable_path="/usr/local/bin/geckodriver")
-browser.get('http://br4.monstersgame.moonid.net/')
+browser.get('http://br4.monstersgame.moonid.net/') #login page
 print('Title: %s' % browser.title)
 time.sleep(2)
-cookie = {"name": "GAMESESSID", "value": "i4mif7vfskss8fb91p7guknfrjm1k3fb"}
+cookie = {"name": "GAMESESSID", "value": "cookie here"} #set coockie
 browser.add_cookie(cookie)
-cookie1 = {"name": "sessionid", "value": "igy59bi2z8s2agqymgtjexzhf6hn5w6a", "domain" : ".moonid.net"}
+cookie1 = {"name": "sessionid", "value": "cookie here", "domain" : ".moonid.net"} #set coockie
 browser.add_cookie(cookie1)
-cookie2 = {"name": "csrftoken", "value": "LxsXEfK6Yv5iB18ecvK2XOgAANyGgp1chzGPjAAPALCuowRfrhJZ5teUI4LgZqrz", "domain" : ".moonid.net"}
+cookie2 = {"name": "csrftoken", "value": "cookie here", "domain" : ".moonid.net"} #set coockie
 browser.add_cookie(cookie2)
-cookie3 = {"name": "_swa_uv", "value": "5304475241650333456", "domain" : ".moonid.net"}
+cookie3 = {"name": "_swa_uv", "value": "cookie here", "domain" : ".moonid.net"} #set coockie
 browser.add_cookie(cookie3)
 time.sleep(2)
 browser.refresh()
